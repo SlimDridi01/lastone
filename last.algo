@@ -1,0 +1,17 @@
+ALGORITHM Ins sort
+VAR
+ tab : ARRAY_OF INTEGER[10].
+  key,i,y:INTEGER;
+BEGIN
+
+    FOR i FROM 1 TO tab.length-1 STEP 1  DO
+    key:=tab[i];
+    y:= i-1;
+    WHILE (y>=0 && tab[y]>key) DO
+        tab[y+1]:= tab[y];
+        y:=y-1;
+    END_WHILE
+    tab[y+1]:=key;
+       
+    END_FOR
+END
